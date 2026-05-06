@@ -1,0 +1,2 @@
+# Ajoutez ici les dépendances du script, par exemple :
+# requests>=2.0
