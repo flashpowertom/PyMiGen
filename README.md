@@ -1,6 +1,6 @@
-# Générateur d'image Mistral
+# Générateur d'image
 
-Ce dépôt contient le projet Python "Générateur d'image Mistral". Il est versionné avec Git et conçu pour être utilisé comme dépôt indépendant.
+Ce dépôt contient le projet Python "Générateur d'image". Il est versionné avec Git et conçu pour être utilisé comme dépôt indépendant.
 
 ## Contenu
 
