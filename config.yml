@@ -1,2 +1,14 @@
-keywords: "un chat noir, lune pleine, style cyberpunk"
-output_path: "/chemin/vers/dossier/output.png"
+# Configuration pour Hugging Face InferenceClient
+# Modèle : black-forest-labs/FLUX.1-dev (rapide et gratuit)
+
+# Prompt pour la génération d'image (obligatoire)
+keywords: "A futuristic city skyline at sunset"
+
+# Modèle à utiliser
+model: "black-forest-labs/FLUX.1-dev"
+
+# Fournisseur d'inférence (wavespeed = rapide)
+provider: "wavespeed"
+
+# Chemin de sortie pour l'image générée
+output_path: "output/output.png"

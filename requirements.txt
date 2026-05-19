@@ -1,2 +1,6 @@
-# Ajoutez ici les dépendances du script, par exemple :
-# requests>=2.0
+# Dépendances pour le générateur d'image Hugging Face
+requests>=2.31.0
+pyyaml>=6.0.1
+python-dotenv>=1.0.0
+huggingface_hub>=0.23.0
+Pillow>=10.0.0
