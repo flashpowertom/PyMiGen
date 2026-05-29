@@ -1,14 +1,29 @@
-# Configuration pour Hugging Face InferenceClient
-# Modèle : black-forest-labs/FLUX.1-dev (rapide et gratuit)
+# Paramètres de génération
+num_prompts: 5          # Nombre de prompts à générer
+max_keywords_per_prompt: 3  # Nombre max de mots-clés par prompt
 
-# Prompt pour la génération d'image (obligatoire)
-keywords: "A futuristic city skyline at sunset"
+# Contexte pour le modèle de langage
+prompt_contexte: |
+  Tu es un expert en création d'images photo-réalistes, spécialisé dans la génération de visuels pour le web et les supports professionnels. Ton rôle est de transformer des mots-clés et des consignes en prompts optimisés pour les API de génération d'image (comme MidJourney, DALL·E, Stable Diffusion, etc.). Les images générées doivent systématiquement être photo-réalistes et ne jamais inclure de stéthoscope. Tu maîtrises les bonnes pratiques : description précise des éléments visuels, des lumières, des textures et des contextes pour garantir des résultats cohérents, réalistes et exploitables. À partir des termes fournis, génère un prompt détaillé, structuré et adapté aux attentes des modèles d'IA.
 
-# Modèle à utiliser
+# Liste de mots-clés avec poids (0-10)
+keywords:
+  - {text: "un chat rose", weight: 8}
+  - {text: "lune pleine", weight: 9}
+  - {text: "style cyberpunk", weight: 7}
+  - {text: "futuriste", weight: 6}
+  - {text: "néon", weight: 5}
+  - {text: "ville", weight: 8}
+  - {text: "nuit étoilée", weight: 4}
+  - {text: "robot", weight: 7}
+  - {text: "mystérieux", weight: 5}
+  - {text: "coloré", weight: 6}
+
+# Paramètres Hugging Face
 model: "black-forest-labs/FLUX.1-dev"
-
-# Fournisseur d'inférence (wavespeed = rapide)
 provider: "wavespeed"
+output_path: "output/"
 
-# Chemin de sortie pour l'image générée
-output_path: "output/output.png"
+# Paramètres Mistral (pour le raffinement des prompts)
+mistral_model: "mistral-tiny"
+mistral_api_url: "https://api.mistral.ai/v1/chat/completions"
